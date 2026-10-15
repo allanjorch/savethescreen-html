@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Save the Screen</title>
+    <link rel="stylesheet" href="css/shared.css" />
+  </head>
+  <body class="gallery">
+    <div class="gallery-wrap">
+      <header>
+        <div>
+          <p class="kicker">Ten fullscreen savers</p>
+          <h1>Save the Screen</h1>
+        </div>
+        <p class="lede">
+          Open one, press F, and let it run. Walking color is what keeps a panel
+          from holding a ghost of your last window. ½ brings you back here.
+        </p>
+      </header>
+
+      <div class="grid">
+        <article class="card">
+          <div class="preview">
+            <iframe src="veil.html?embed=1" title="" tabindex="-1" aria-hidden="true"></iframe>
+          </div>
+          <a class="hit" href="veil.html">
+            <span class="num">01</span>
+            <h2>Veil</h2>
+            <p>Aurora curtains that keep sliding over a drifting sky.</p>
+          </a>
+        </article>
+
+        <article class="card">
+          <div class="preview">
+            <iframe src="drift.html?embed=1" title="" tabindex="-1" aria-hidden="true"></iframe>
+          </div>
+          <a class="hit" href="drift.html">
+            <span class="num">02</span>
+            <h2>Drift</h2>
+            <p>Ink in water. Filaments crawl so no region sits still.</p>
+          </a>
+        </article>
+
+        <article class="card">
+          <div class="preview">
+            <iframe src="ember.html?embed=1" title="" tabindex="-1" aria-hidden="true"></iframe>
+          </div>
+          <a class="hit" href="ember.html">
+            <span class="num">03</span>
+            <h2>Ember</h2>
+            <p>Slow lava bloom. Heat that never parks in one place.</p>
+          </a>
+        </article>
+
+        <article class="card">
+          <div class="preview">
+            <iframe src="bodies.html?embed=1" title="" tabindex="-1" aria-hidden="true"></iframe>
+          </div>
+          <a class="hit" href="bodies.html">
+            <span class="num">04</span>
+            <h2>Bodies</h2>
+            <p>Soft orbs on wandering paths, covering the whole rectangle.</p>
+          </a>
+        </article>
+
+        <article class="card">
+          <div class="preview">
+            <iframe src="shoal.html?embed=1" title="" tabindex="-1" aria-hidden="true"></iframe>
+          </div>
+          <a class="hit" href="shoal.html">
+            <span class="num">05</span>
+            <h2>Shoal</h2>
+            <p>Pool-floor light, constantly rewriting the highlights.</p>
+          </a>
+        </article>
+      </div>
+
+      <p class="set-label">Night</p>
+      <div class="grid">
+        <article class="card">
+          <div class="preview">
+            <iframe src="gloam.html?embed=1" title="" tabindex="-1" aria-hidden="true"></iframe>
+          </div>
+          <a class="hit" href="gloam.html">
+            <span class="num">06</span>
+            <h2>Gloam</h2>
+            <p>A dim twilight veil. Movement you notice after a breath.</p>
+          </a>
+        </article>
+
+        <article class="card">
+          <div class="preview">
+            <iframe src="cinder.html?embed=1" title="" tabindex="-1" aria-hidden="true"></iframe>
+          </div>
+          <a class="hit" href="cinder.html">
+            <span class="num">07</span>
+            <h2>Cinder</h2>
+            <p>Coals in the dark. Heat that stays low and keeps drifting.</p>
+          </a>
+        </article>
+
+        <article class="card">
+          <div class="preview">
+            <iframe src="murk.html?embed=1" title="" tabindex="-1" aria-hidden="true"></iframe>
+          </div>
+          <a class="hit" href="murk.html">
+            <span class="num">08</span>
+            <h2>Murk</h2>
+            <p>Charcoal fog rolling so slowly the black never sits still.</p>
+          </a>
+        </article>
+
+        <article class="card">
+          <div class="preview">
+            <iframe src="wisp.html?embed=1" title="" tabindex="-1" aria-hidden="true"></iframe>
+          </div>
+          <a class="hit" href="wisp.html">
+            <span class="num">09</span>
+            <h2>Wisp</h2>
+            <p>Thin ghost-lights on near-black, stretching as they wander.</p>
+          </a>
+        </article>
+
+        <article class="card">
+          <div class="preview">
+            <iframe src="silt.html?embed=1" title="" tabindex="-1" aria-hidden="true"></iframe>
+          </div>
+          <a class="hit" href="silt.html">
+            <span class="num">10</span>
+            <h2>Silt</h2>
+            <p>Deep water at night. Faint caustics and motes, barely there.</p>
+          </a>
+        </article>
+      </div>
+
+      <p class="note">
+        This panel is IPS Black, so OLED-style burn-in is unlikely — a bright
+        static window can still leave a faint afterimage. <strong>Every pixel
+        here keeps moving</strong>, plus a slow whole-frame wander. Open a card,
+        then click or press F for fullscreen. Keys 1–0 jump between versions.
+        ½ returns to this gallery — the same key as the Quake console.
+      </p>
+    </div>
+    <script src="js/shared.js"></script>
+    <script>
+      window.addEventListener("keydown", function (event) {
+        var next = SaveScreen.saverFromKey(event.key);
+        if (next) location.href = next.href;
+      });
+    </script>
+  </body>
+</html>
